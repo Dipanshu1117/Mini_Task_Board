@@ -1,23 +1,24 @@
-import React from 'react'
+
 
 const Header = () => {
   return (
-    <div className='bg-[#FEFEFE] w-full mt-2 h-20'>
-        <div className='flex justify-between'>
-            <div className='flex gap-2 p-4'> 
-                <div className='text-3xl h-8 w-8 bg-blue-600 text-center rounded-xs'>✓</div>
-                <h1 className='text-4xl text-black font-bold'>TaskBoard</h1>
-                <div className='h-12 w-1 bg-gray-400 '></div>
-                <p className='text-gray-300 mt-5'>Manage Your Task</p>
-            </div>
-
-
-            <div>
-                <button className='bg-blue-600 m-4 mr-15 h-10 w-25 rounded-xl'>+ Add Task</button>
-            </div>
+    <header className="w-full border-b border-slate-200 bg-white/95 backdrop-blur-sm">
+      <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-4">
+        <div className="flex items-center gap-3">
+          <div className="flex h-8 w-8 items-center justify-center rounded-md bg-[#2E79FF] text-sm font-bold text-white shadow-sm">
+            ✓
+          </div>
+          <h1 className="text-4xl font-bold tracking-tight text-slate-800">TaskBoard</h1>
+          <div className="w-1 h-12 bg-gray-200"></div>
+          <span className="hidden text-base text-slate-400 sm:inline">Manage your tasks</span>
         </div>
-    </div>
-  )
-}
 
-export default Header
+        <button className="rounded-xl bg-[#2E79FF] px-4 py-2.5 text-base font-semibold text-white shadow-sm transition hover:bg-[#256fe6]">
+          + Add Task
+        </button>
+      </div>
+    </header>
+  );
+};
+
+export default Header;
